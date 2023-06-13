@@ -86,8 +86,11 @@ public class MyDate {
     public boolean isBefore(int year, int month, int day) {
         
         if (year != this.year) {
-            //proceed to compare
-        } else return false;
+            //proceed to compare two different years
+            if (year > this.year) {
+                return true;
+            } else return false;
+        } else if ()
         
         
         //test
