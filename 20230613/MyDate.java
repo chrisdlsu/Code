@@ -6,6 +6,9 @@ public class MyDate {
 
     //CONSTRUCTORS
     public MyDate(int year, int month, int day) { // all attr
+        this.year = year;
+        this.month = month;
+        this.day = day;
         
     }
     public MyDate(int month, int day) { // year init to 2022
@@ -37,74 +40,77 @@ public class MyDate {
         this.day = day;
     }
 
-    public int setMonth(String month) { //additional method for String month
-        month = month.toLowerCase(); // convert string to lowercase
-        switch (month) {
+    public void setMonth(String month) { //additional method for String month
+       
+        String sMonth = month.toLowerCase(); // convert string to lowercase
+        int nMonth;
+
+        switch (sMonth) {
             case "january":
-                return 1;
+                //nMonth = 1;
+                //return nMonth;
+                this.month = 1;
                 break;
             case "february":
-                return 2;
+                //nMonth = 2;    
+                //return nMonth;
+                this.month = 2;
                 break;
             case "march":
-                return 3;
+                //nMonth = 3;
+                //return nMonth;
+                this.month = 3;
                 break;
             case "april":
-                return 4;
+                //nMonth = 4;
+                //return nMonth;
+                this.month = 4;
                 break;
             case "may":
-                return 5;
+                //nMonth = 5;
+                //return nMonth;
+                this.month = 5;
                 break;
             case "june":
-                return 6;
+                //nMonth = 6;
+                //return nMonth;
+                this.month = 6;
                 break;
             case "july":
-                return 7;
+                //nMonth = 7;
+                //return nMonth;
+                this.month = 7;
                 break;
             case "august":
-                return 8;
+                //nMonth = 8;
+                //return nMonth;
+                this.month = 8;
                 break;
             case "september":
-                return 9;
+                //nMonth = 9;
+                //return nMonth;
+                this.month = 9;
                 break;
             case "october":
-                return 10;
+                //nMonth = 10;
+                //return nMonth;
+                this.month = 10;
                 break;
             case "november":
-                return 11;
+                //nMonth = 11;
+                //return nMonth;
+                this.month = 11;
                 break;
             case "december":
-                return 12;
+                //nMonth = 12;
+                //return nMonth;
+                this.month = 12;
                 break;
             default: 
-                System.out.println("month cannot be matched");
+                //return 0;
+                this.month = 13;
                 break;
         }
-    }
-
-    //OTHER METHODS
-    public boolean isBefore(int year, int month, int day) {
-        
-        if (year != this.year) {
-            //proceed to compare two different years
-            if (year > this.year) {
-                return true;
-            } else return false;
-        } else if ()
-        
-        
-        //test
-        if (year > this.year) {
-            return true;
-        } else return false;
-
-
-        // do an if statement to:
-        //compare YEAR
-        // compare MONTH
-        // compare DAY
-
-        //return boolean;
     }
 
 }
