@@ -45,57 +45,36 @@ public class MyDate {
     public void setMonth(String month) { //additional method for String month
        
         String sMonth = month.toLowerCase(); // convert string to lowercase
-        //int nMonth;
 
         switch (sMonth) {
             case "january":
-                //nMonth = 1;
-                //return nMonth;
                 this.month = 1;
                 break;
             case "february":
-                //nMonth = 2;    
-                //return nMonth;
                 this.month = 2;
                 break;
             case "march":
-                //nMonth = 3;
-                //return nMonth;
                 this.month = 3;
                 break;
             case "april":
-                //nMonth = 4;
-                //return nMonth;
                 this.month = 4;
                 break;
             case "may":
-                //nMonth = 5;
-                //return nMonth;
                 this.month = 5;
                 break;
             case "june":
-                //nMonth = 6;
-                //return nMonth;
                 this.month = 6;
                 break;
             case "july":
-                //nMonth = 7;
-                //return nMonth;
                 this.month = 7;
                 break;
             case "august":
-                //nMonth = 8;
-                //return nMonth;
                 this.month = 8;
                 break;
             case "september":
-                //nMonth = 9;
-                //return nMonth;
                 this.month = 9;
                 break;
             case "october":
-                //nMonth = 10;
-                //return nMonth;
                 this.month = 10;
                 break;
             case "november":
@@ -104,20 +83,16 @@ public class MyDate {
                 this.month = 11;
                 break;
             case "december":
-                //nMonth = 12;
-                //return nMonth;
                 this.month = 12;
                 break;
             default: 
-                //return 0;
-                this.month = 13;
+                this.month = 13; // testing value
                 break;
         }
     }
 
-    public boolean isBefore(MyDate date) {
-        //code
-        // Check YEAR first, if same, move to month, if same, move to day
+    public boolean isBefore(MyDate date) { // Check YEAR first, if same, move to month, if same, move to day
+
         if (this.year < date.year) { // if year is prior
             return true; //year is before date compared
         } else if (this.year > date.year) { // if year is after
