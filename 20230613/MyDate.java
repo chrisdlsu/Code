@@ -13,6 +13,8 @@ public class MyDate {
     }
     public MyDate(int month, int day) { // year init to 2022
         this.year = 2022;
+        this.month = month;
+        this.day = day;
     }
     public MyDate() { // no attr, default 1990 1 1
         this.year = 1990;
@@ -43,7 +45,7 @@ public class MyDate {
     public void setMonth(String month) { //additional method for String month
        
         String sMonth = month.toLowerCase(); // convert string to lowercase
-        int nMonth;
+        //int nMonth;
 
         switch (sMonth) {
             case "january":
@@ -113,4 +115,16 @@ public class MyDate {
         }
     }
 
+    public boolean isBefore(MyDate date) {
+        //code
+        // Check year first, if same, move to month, if same, move to
+        if (date.year != this.year) {
+            System.out.println("not same year");
+            return false;
+        }
+         else  {
+            System.out.println("SAME year");
+        return true;
+         }
+    }
 }
