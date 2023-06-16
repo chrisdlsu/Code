@@ -5,18 +5,18 @@ public class MyDate {
     private int day;
 
     //CONSTRUCTORS
-    public MyDate(int year, int month, int day) { // all attr
+    public MyDate(int year, int month, int day) { // all attributes
         this.year = year;
         this.month = month;
         this.day = day;
         
     }
-    public MyDate(int month, int day) { // year init to 2022
+    public MyDate(int month, int day) { // year value initializes to 2022
         this.year = 2022;
         this.month = month;
         this.day = day;
     }
-    public MyDate() { // no attr, default 1990 1 1
+    public MyDate() { // no attribution, default: 1990 1 1
         this.year = 1990;
         this.month = 1;
         this.day = 1;

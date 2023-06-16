@@ -5,6 +5,7 @@ public class Main {
         MyDate newYear = new MyDate(2023, 1, 1);
         MyDate valentines = new MyDate(2023, 2, 14);
         MyDate myBirthday = new MyDate(1990, 1, 1);
+        MyDate xmas23 = new MyDate();
 
         //TEST PRINTS
         System.out.println(newYear.getYear() + " " + newYear.getMonth() + " " + newYear.getDay());
@@ -16,6 +17,12 @@ public class Main {
         System.out.println(valentines.isBefore(newYear));
         System.out.println(myBirthday.isBefore(newYear));
         System.out.println(newYear.isBefore(myBirthday));
+
+        //TEST PRINTS FOR setMonth
+        System.out.println(xmas23.getMonth());
+        xmas23.setMonth("jUne");
+        System.out.println(xmas23.getMonth());
+
 
 
 
