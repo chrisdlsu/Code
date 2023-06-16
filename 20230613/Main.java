@@ -2,26 +2,23 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("hello world");
 
-        MyDate testCal = new MyDate(1990, 12, 4);
-        MyDate testCal2 = new MyDate(2, 2);
-        MyDate testCal3 = new MyDate();
+        MyDate newYear = new MyDate(2023, 1, 1);
+        MyDate valentines = new MyDate(2023, 2, 14);
+        MyDate myBirthday = new MyDate(1990, 1, 1);
 
-        System.out.println(testCal.getYear());
-        System.out.println(testCal.getMonth());
-        System.out.println(testCal.getDay());
+        //TEST PRINTS
+        System.out.println(newYear.getYear() + " " + newYear.getMonth() + " " + newYear.getDay());
+        System.out.println(valentines.getYear() + " " + valentines.getMonth() + " " + valentines.getDay());
+        System.out.println(myBirthday.getYear() + " " + myBirthday.getMonth() + " " + myBirthday.getDay());
 
-        //testCal.setMonth("july");
-        System.out.println(testCal.getMonth());
+        //COMPARE
+        System.out.println(newYear.isBefore(valentines));
+        System.out.println(valentines.isBefore(newYear));
+        System.out.println(myBirthday.isBefore(newYear));
+        System.out.println(newYear.isBefore(myBirthday));
 
-        System.out.println(testCal2.getYear());
-        System.out.println(testCal2.getMonth());
-        System.out.println(testCal2.getDay());
 
-        System.out.println(testCal3.getYear());
-        System.out.println(testCal3.getMonth());
-        System.out.println(testCal3.getDay());
 
-        testCal.isBefore(testCal3);
 
     }
 }

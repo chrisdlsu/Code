@@ -117,14 +117,21 @@ public class MyDate {
 
     public boolean isBefore(MyDate date) {
         //code
-        // Check year first, if same, move to month, if same, move to
-        if (date.year != this.year) {
-            System.out.println("not same year");
+        // Check YEAR first, if same, move to month, if same, move to day
+        if (this.year < date.year) { // if year is prior
+            return true; //year is before date compared
+        } else if (this.year > date.year) { // if year is after
             return false;
-        }
-         else  {
-            System.out.println("SAME year");
-        return true;
-         }
+        } else if (this.month < date.month)  { //same year, moving to month
+            return true;
+        } else if (this.month > date.month) { // month if after
+            return false;
+        } else if (this.day < date.day) { //same month, moving to day
+            return true;
+        } else if (this.day > date.day) { // day is after to compared
+            return false;
+        } else {
+            return false;
+        }   
     }
 }
